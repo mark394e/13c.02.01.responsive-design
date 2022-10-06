@@ -1,0 +1,92 @@
+/* Tip, copy paste from 13c.01.01 & 13c.01.02 to get fonts and colors up and running ... */
+
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Fonts */
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+}
+
+:root {
+  --color-primary: #e3dfcb;
+  --color-secondary: #1f3a29;
+  --color-accent: #6ac358;
+  --color-light-primary: #eeebdc;
+  --color-dark-accent: #2e6c21;
+  --color-dark-secondary: #0e2015;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+nav {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-secondary);
+  color: var(--color-light-primary);
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+.cta_btn {
+  border: none;
+  padding: 0.5rem;
+  background-color: var(--color-accent);
+  color: var(--color-dark-secondary);
+}
+
+header {
+  background-image: url(images/pexels-lumn-167699.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 150px repeat(4, 1fr) 150px;
+  grid-template-rows: 100px repeat(3, 1fr) 100px;
+}
+
+.header_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: 2/4;
+  grid-row: 2/4;
+}
+
+.header_graphics {
+  background-image: url(images/pexels-jonaorle-4029925.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: 2/5/4/6;
+  border-radius: 180px;
+}
+
+.advantages_cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages_card_graphics {
+  background-image: url(images/pexels-charles-pragnell-2524164.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-width: 100%;
+  min-height: 100%;
+}
