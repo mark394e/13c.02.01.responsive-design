@@ -13,14 +13,17 @@
   <body>
     <nav>
       <!-- Menu component layout -->
+
       <a href="index.html">Logo</a>
-      <ul>
+      <ul id="menu" class="hidden">
         <li><a href="#advantages">Advantages</a></li>
         <li><a href="#product">Product</a></li>
         <li><a href="#team">Team</a></li>
       </ul>
+      <div id="menubtn">☰</div>
       <button type="button" class="cta_btn">Learn More &#x2794;</button>
     </nav>
+
     <header>
       <!-- Header section -->
       <!-- Add image-->
@@ -121,12 +124,14 @@
           <p>45% dextris iure</p>
         </div>
       </div>
-      <button type="button">Request Demo &#x2794;</button>
+      <div class="btn_wrapper_highlight">
+        <button type="button">Request Demo &#x2794;</button>
+      </div>
     </section>
     <section id="team">
       <h2>Meet the Team</h2>
       <!-- Components with graphics to one side and text to the other -->
-      <article>
+      <article id="article1">
         <!-- Add image-->
         <section class="team_graphics"></section>
         <section class="team_text">
@@ -140,7 +145,7 @@
           <a href="#contact">Contact Cras &#x2794;</a>
         </section>
       </article>
-      <article>
+      <article id="article2">
         <!-- Change order here so text comes first then graphics -->
         <!-- Add image-->
         <section class="team_graphics"></section>
@@ -162,22 +167,22 @@
       <!-- Contact form section layout -->
       <form id="contact_form">
         <!-- Two column layout, name and email a column each, message two columns. Labels should be over input-->
-        <div class="form_group">
+        <div class="form_group_name">
           <label for="name">Full name</label>
           <input type="text" id="name" name="Name" required />
         </div>
 
-        <div class="form_group">
+        <div class="form_group_mail">
           <label for="email">Email address</label>
           <input type="email" id="email" name="Email" required />
         </div>
 
-        <div class="form_group">
+        <div class="form_group_message">
           <label for="message">Message</label>
           <textarea id="message" name="Message" required></textarea>
         </div>
 
-        <div class="form_group">
+        <div class="form_group_submit">
           <button type="submit">Send Message</button>
         </div>
       </form>

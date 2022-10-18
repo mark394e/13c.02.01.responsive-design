@@ -5,12 +5,12 @@
   margin: 0px;
   padding: 0px;
   list-style: none;
+  box-sizing: border-box;
 }
 
 /* Fonts */
 html {
   font-family: "Poppins", sans-serif;
-  font-size: 1.2em;
 }
 
 :root {
@@ -29,7 +29,7 @@ a {
 
 nav {
   display: flex;
-  padding: 1rem;
+  padding: 1rem 0;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-secondary);
@@ -39,6 +39,10 @@ nav {
 nav ul {
   display: flex;
   gap: 30px;
+}
+
+nav > a {
+  padding-left: 1rem;
 }
 
 .cta_btn {
@@ -55,17 +59,13 @@ header {
   background-position: center;
   width: 100vw;
   height: 80vh;
-  display: grid;
-  grid-template-columns: 150px repeat(4, 1fr) 150px;
-  grid-template-rows: 100px repeat(3, 1fr) 100px;
+  display: flex;
 }
 
 .header_text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  grid-column: 2/4;
-  grid-row: 2/4;
 }
 
 .header_graphics {
@@ -73,13 +73,29 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  grid-area: 2/5/4/6;
-  border-radius: 180px;
+}
+
+#advantages {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  align-items: center;
 }
 
 .advantages_cards {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  gap: 20px;
+}
+
+.advantages_card {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--color-light-primary);
 }
 
 .advantages_card_graphics {
@@ -87,6 +103,406 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-width: 100%;
-  min-height: 100%;
+  height: 300px;
+  width: 300px;
+}
+
+#product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#product h2 {
+  grid-area: 1/2/2/4;
+  justify-self: center;
+}
+
+.product_text {
+  padding: 2rem;
+}
+
+.product_graphics {
+  background-image: url(images/pexels-charles-pragnell-2524164.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.highlight h2 {
+  font-size: 1.7rem;
+}
+.highlight_small_cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  order: 1;
+}
+
+.highlight_small_cards div {
+  height: 300px;
+  width: 300px;
+  background-color: #1f3a29;
+  padding: 1rem;
+}
+
+.btn_wrapper_highlight {
+  margin-top: 0.5rem;
+}
+
+#team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+#team h2 {
+  align-self: center;
+}
+
+.team_graphics {
+  background-image: url(images/pexels-charles-pragnell-2524164.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  align-self: center;
+  margin-bottom: 0.5rem;
+}
+
+/* #article2 .team_text {
+  order: -1;
+} */
+#article1,
+#article2 {
+  display: flex;
+  flex-direction: column;
+  /* grid-area: 2/2/3/6; */
+  justify-content: space-around;
+  align-self: center;
+}
+/* #article2 {
+  display: flex;
+  flex-direction: ;
+  grid-area: 3/2/4/6;
+  justify-content: space-around;
+} */
+
+#contact {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact h2 {
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+#contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.form_group_name,
+.form_group_mail,
+.form_group_message {
+  display: flex;
+  flex-direction: column;
+}
+
+#message {
+  height: 100px;
+}
+
+.form_group_submit {
+  justify-self: end;
+  align-self: center;
+}
+
+.form_group_submit > button {
+  width: 20.31rem;
+  height: 3.125rem;
+}
+
+#contact p {
+  margin-bottom: 2rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: var(--color-dark-secondary);
+}
+
+footer > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 1.5rem;
+  gap: 20px;
+}
+
+footer section div ul {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+#menubtn {
+  display: inline-block;
+  order: 1;
+  font-size: 3rem;
+  padding-right: 1rem;
+}
+
+#menu {
+  list-style-type: none;
+  transition: 0.3s;
+  transform-origin: top center;
+  transform: translateY(100%);
+  background-color: var(--color-secondary);
+  width: 100%;
+  height: 4rem;
+  position: absolute;
+  align-items: center;
+  padding: 1rem;
+}
+
+.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  nav {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 30px;
+  }
+
+  .cta_btn {
+    border: none;
+    padding: 0.5rem;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 150px repeat(4, 1fr) 150px;
+    grid-template-rows: 100px repeat(3, 1fr) 100px;
+    margin-bottom: 2rem;
+  }
+
+  .header_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: 2/4;
+    grid-row: 2/4;
+  }
+
+  .header_graphics {
+    grid-area: 2/5/4/6;
+    border-radius: 180px;
+  }
+
+  #advantages {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px 1fr 50px;
+    padding-bottom: 2rem;
+  }
+
+  #advantages h2 {
+    grid-area: 1/2/2/3;
+    justify-self: center;
+  }
+
+  .advantages_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+    grid-gap: 1rem;
+    grid-area: 2/2/4/3;
+  }
+
+  .advantages_card {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #product {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 50px;
+    grid-template-rows: 50px repeat(2, 1fr) 50px;
+    justify-items: center;
+    row-gap: 30px;
+  }
+
+  #product h2 {
+    grid-area: 1/2/2/4;
+    justify-self: center;
+  }
+
+  .product_text {
+    grid-area: 2/3/4/4;
+    width: 500px;
+  }
+
+  .product_graphics {
+    justify-self: center;
+    grid-area: 2/2/4/3;
+  }
+
+  .highlight {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 50px;
+    grid-auto-rows: 50px 1fr 1fr 50px;
+    row-gap: 30px;
+  }
+  .highlight h2 {
+    grid-area: 2/2/3/4;
+    font-size: 3rem;
+  }
+  .highlight_small_cards {
+    display: flex;
+    grid-area: 3/2/3/4;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .btn_wrapper_highlight {
+    grid-area: 2/2/3/3;
+    align-self: end;
+  }
+
+  #team {
+    display: grid;
+    grid-template-columns: 50px repeat(4, 1fr) 50px;
+    grid-template-rows: 50px 1fr 1fr 50px;
+    row-gap: 30px;
+  }
+
+  #team h2 {
+    grid-area: 1/2/2/6;
+    justify-self: center;
+  }
+
+  #article2 .team_text {
+    order: -1;
+  }
+  #article1 {
+    display: flex;
+    grid-area: 2/2/3/6;
+    justify-content: space-around;
+  }
+  #article2 {
+    display: flex;
+    grid-area: 3/2/4/6;
+    justify-content: space-around;
+  }
+
+  #contact_form {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 100px;
+    grid-template-rows: 50px 1fr 1fr 50px;
+    column-gap: 50px;
+    grid-area: 2/2/4/4;
+  }
+  .form_group_name {
+    grid-area: 2/2/3/3;
+    display: flex;
+    flex-direction: column;
+  }
+  .form_group_mail {
+    grid-area: 2/3/3/4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form_group_message {
+    grid-area: 3/2/4/4;
+    display: flex;
+    flex-direction: column;
+  }
+  #message {
+    height: 100px;
+  }
+
+  .form_group_submit {
+    grid-area: 4/3/5/4;
+    justify-self: end;
+    align-self: center;
+  }
+  #contact {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px 50px 1fr 50px;
+  }
+
+  #contact h2 {
+    grid-area: 1/2/2/3;
+  }
+  #contact p {
+    grid-area: 2/2/2/3;
+    align-self: start;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    height: 250px;
+  }
+
+  footer > section {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1.5rem;
+  }
+
+  footer > div {
+    padding: 1.5rem;
+  }
+
+  footer section div ul {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+  }
+
+  #menuknap {
+    display: none;
+  }
+
+  #menu.hidden {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  #menu li {
+    display: inline-block;
+  }
 }
